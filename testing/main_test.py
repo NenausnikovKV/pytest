@@ -12,7 +12,7 @@ MORE_ZERO_DIGIT = 1
 
 @pytest.fixture(scope='module', autouse=True)
 def say_hello():
-    """Фикстура, вызываемая при текстах всегда, не требует привязки к тесту"""
+    """Фикстура, вызываемая при тестах всегда, не требует привязки к тесту"""
     print("Test start")
 
 
@@ -42,15 +42,15 @@ def get_prime_nums(get_min_num, get_max_num):
     print("\nТестирование завершено")
 
 
-def test_sum2():
-    """ Проверка сложения двух чисел"""
-    assert sum2(15, 8) == 23, "Неверное сложение"
-
-
 def test_plus2(get_prime_nums):
     """Проверка прибавления 2 к каждому элементу итерируемого объекта"""
     prime_nums = get_prime_nums
     assert plus2(prime_nums) == [3, 4, 5, 7, 9, 13, 15, 19, 21, 25, 31, 33, 39, 43, 45, 49], "Ошибка прибавления 2"
+
+
+def test_sum2():
+    """ Проверка сложения двух чисел"""
+    assert sum2(15, 8) == 23, "Неверное сложение"
 
 
 def test_multiply2(get_prime_nums):
