@@ -102,3 +102,8 @@ def test_negative_or_positive_if_positive(x):
 def test_negative_or_positive(x, expected_result):
     """ Проверка на положительных и отрицательных числах """
     assert positive_or_negative(x) == expected_result
+
+
+@pytest.mark.my_mark
+def test_with_personal_mark():
+    pass
