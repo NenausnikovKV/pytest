@@ -9,7 +9,7 @@ def sum2(x, y):
 
 
 def plus2(nums):
-    """ Прибавляем 2 к каждыому элементу коллекции """
+    """ Прибавляем 2 к каждому элементу коллекции """
     result = []
     for num in nums:
         result.append(num + 2)
@@ -30,3 +30,12 @@ def exponent2(nums):
     for num in nums:
         result.append(num ** 2)
     return result
+
+
+def positive_or_negative(x):
+    """ Конвертируем число в строку """
+    if x > 0:
+        return 'positive'
+    if x < 0:
+        return 'negative'
+    return 'zero'
