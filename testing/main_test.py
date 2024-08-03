@@ -77,12 +77,6 @@ def test_skipped_if():
     """ Пропуск теста по условию """
 
 
-@pytest.mark.xfail(reason="Expected failure")
-def test_expected_failed():
-    """ Ожидаемый провал теста """
-    assert False
-
-
 @pytest.mark.parametrize("x", [165, 1.2, 0.00000001])
 def test_negative_or_positive_if_positive(x):
     """Проверка на положительных числах"""
